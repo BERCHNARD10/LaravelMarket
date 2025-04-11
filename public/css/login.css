@@ -1,0 +1,193 @@
+@import url(../css/styles-elements.css);
+@import url(../css/app.css);
+.header[id="login"] {
+    background: #ffffff00;
+    padding: 1.5rem 4%;
+    border-bottom: 0rem;
+    width: 35%;
+}
+.header[id="login"] .logo img {
+    height: 11rem;
+}
+main.container {
+    max-width: -webkit-fill-available;
+}
+/*--image_login*/
+.image-login{
+    display: flex;
+    background-image: url('../images/login-image.png');
+    background-position: left; /*posicionar imagen a la derecha y centrada*/
+    position: relative; /*posicionar otros elementos absolutos*/
+    background-size: cover;
+    flex: 0 0 calc(40%);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: alternate-reverse 10s;
+}
+.image-login::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: linear-gradient(to left,#010103be, rgb(255 255 255 / 0%) );
+}
+.image-login .content {
+    max-width: 60rem;
+}
+.image-login .content h3{  
+font-size: 6rem;
+text-transform: uppercase;
+color: #fff;
+}
+/*Style Form*/
+.form-style {
+    display: flex;
+    flex: 0 0 calc(40%);
+    text-align: center;
+    margin: 0 4.5rem;
+    padding: 1rem 6rem 4rem 6rem;
+    align-content: center;
+    flex-direction: column;
+}
+.text-form, .info{
+    padding: 1.5rem 0;
+
+}
+.text-form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: var(--textcolor);
+}
+.text-form p, .input h2{
+    font-size: 1.6rem;
+    color: var(--textcolor);
+    line-height: 1.8;
+}
+.fas {
+    padding-left: 1rem;
+    font-size: 2rem;
+}
+.fa-eye{
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.group-input {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: solid 1px;
+    border-color: #ffffff8a;
+    width: -webkit-fill-available;
+}
+form .input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--bg);
+}
+.input-btn {
+    display: flex;
+}
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+
+
+@media(max-width:768px){
+    .image-login{
+        height: auto;
+        background-position: right;
+        min-height: 30vh;
+    }
+    .image-login .content h3 {
+        font-size: 2.6rem;
+    }
+    .form-style {
+        min-height: 70vh;
+        justify-content: flex-start;
+    }
+}
+@media(min-width:1200px){
+    .image-login{
+        background-position: center;
+    }
+}
+
+@media(min-width:768px){
+    .container{
+        display: flex;
+    }
+}
+
+.text-form h3{
+    font-size: 2.5rem;
+}
+.texto-for p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.password-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.input input, select {
+    padding: 0.9rem;
+    font-size: 1.2rem;
+    color: var(--textcolor);
+    text-transform: none;
+    background: none;
+}
+.user-date-ext .input {
+    margin: 1rem 0 1rem;
+}
+
+.input input[type="submit"]:hover{
+  
+    cursor: pointer;
+    background-color: var(--azulOscuro);
+}
+
+/**/
+
+
+.input-error {
+    font-size: 1.3rem;
+    color: var(--textcolor);
+    line-height: 1.8;
+    display: none;
+}
+.input-error-activo {
+    display: block;
+    margin-top: 0.6rem;
+    text-align: initial;
+}
+/**/
+.input-correcto {
+	opacity: 1;
+}
+
+.input-incorrecto label {
+	color: #bb2929;
+}
+
+.input-incorrecto p, ul {
+	color: #ff2626;
+	opacity: 1;
+}
+
+.input-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: space-evenly;
+}

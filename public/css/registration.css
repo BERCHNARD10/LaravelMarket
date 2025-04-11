@@ -1,0 +1,16 @@
+/*--image_login*/
+.imagen-formulario {
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.imagen-formulario .content {
+    max-width: 60rem;
+}
+.imagen-formulario .content h3{  
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+    }
